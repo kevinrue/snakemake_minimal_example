@@ -10,8 +10,6 @@ singularity: "docker://continuumio/miniconda3"
 include: "rules/common.smk"
 include: "rules/other.smk"
 
-print(samples)
-
 rule all:
     input:
         # The first rule should define the default target files
