@@ -21,9 +21,10 @@ rule all:
 
 rule cat:
     input:
-        file1=expand("data/{sample}1", sample=samples['sample']),
-        file2=expand("data/{sample}2", sample=samples['sample'])
+        file1="data/{sample}1",
+        file2="data/{sample}2"
     output:
         "results/{sample}/cat"
     shell:
         "cat {input.file1} {input.file2} > {output}"
+
