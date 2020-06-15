@@ -17,12 +17,3 @@ rule all:
         expand("results/{sample}/cat", sample=samples['sample'])
 
 
-rule cat:
-    input:
-        file1="data/{sample}1",
-        file2="data/{sample}2"
-    output:
-        "results/{sample}/cat"
-    shell:
-        "cat {input.file1} {input.file2} > {output}"
-
